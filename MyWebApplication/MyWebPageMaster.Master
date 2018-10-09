@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MyWebPageMaster.Master.cs" Inherits="MyWebApplication.Site1" %>
+<%@ Register Src="~/UCHitCount.ascx" TagName="UcHitCount" TagPrefix="UC" %>
+<!DOCTYPE html >
+<html xml:lang="en">
+<head>
+<title>Anushree's Website</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+
+   
+    <%-- script for weather widget --%> 
+    <script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
+    
+<link rel="stylesheet" type="text/css" href="GeneralPage.css"  />
+<script type="text/javascript" src="scripts/WebPageScript.js"></script>
+</head>
+<body>
+<div id="wrap">
+  <div id="header"><br />
+    <h3 class="bold">www.anushreesaha.com</h3>
+    <p><strong>"Life is like a piano. What you get out of it depends on how you play it."</strong><br />
+      -Tom Lehrer</p>
+  </div>
+  <img  src="images/rsz_header2.jpg" width="1000" height="228" alt="" />
+  <div id="avmenu">
+    <h2 class="hide">Menu:</h2>
+    <ul >   
+      <li><a href="Default.aspx">Home</a></li>
+      <li><a href="AboutMe.aspx">About</a></li>
+      <li><a href="Professional.aspx">Professional</a></li>
+      <li><a href="Gallery.aspx">Gallery</a></li>
+      <li><a href="Contact.aspx">Contacts</a></li>
+      <li><a href="Feedback.aspx">Feedback</a></li>
+    </ul>
+      
+      <div id="weather">
+          <a class="aw-widget-legal" href="http://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727"></a>
+          <div id="awcc1452875582719" class="aw-widget-current"  data-locationkey="" data-unit="c" data-language="en-us" data-useip="true" data-uid="awcc1452875582719"></div>
+         </div>
+      <div id="HitCount">
+          <UC:UCHitCount ID="UCHitCounter" runat="server" />
+      </div>
+  </div>
+  <div id="extras">
+    <h3 class="bold">More Info:</h3>
+    <p> To know more about me you can connect via Social Networkig accounts!</p>
+    <h3 class="bold">Links:</h3>
+    <p>&nbsp;<a href="https://www.linkedin.com/in/anushreesaha"><img src="images/linkedin.png" alt="Linkdin" width="25" height="25" /></a><br />
+      &nbsp;<a href="https://www.facebook.com/anushree.lovely"><img src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook40x40.png" alt="Facebook" width="25" height="25" /></a><br />
+      &nbsp;<a href="https://twitter.com/anushreesaha22"><img src="https://c866088.ssl.cf3.rackcdn.com/assets/twiiter40x40.png" alt="Twitter" width="25" height="25" /></a><br />
+        </p>
+    <p class="small">Dezign<br />
+      (24 Jan, 2016)</p>
+    
+  </div>
+  <div id="content" style="position:static"> 
+      <asp:ContentPlaceHolder runat="server" ID="MainContent">
+          <h3>Master</h3>
+      </asp:ContentPlaceHolder>
+  </div>
+  <div id="footer"> Copyright © 2016 (Anushree Saha).</div>
+</div>
+</body>
+</html>
+
+

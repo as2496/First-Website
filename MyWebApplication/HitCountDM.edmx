@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SiteDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="HitCounter">
+          <Key>
+            <PropertyRef Name="SLID" />
+          </Key>
+          <Property Name="SLID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreateData" Type="datetimeoffset" Precision="7" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VisitorsFeedBack">
+          <Key>
+            <PropertyRef Name="VisitorId" />
+          </Key>
+          <Property Name="VisitorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VisitorName" Type="nvarchar" MaxLength="50" />
+          <Property Name="VisitorEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="VisitorCommentTitle" Type="text" />
+          <Property Name="VisitorComment" Type="text" />
+          <Property Name="FeedbackTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="VisitorImage" Type="image" />
+        </EntityType>
+        <EntityContainer Name="SiteDBModelStoreContainer">
+          <EntitySet Name="HitCounter" EntityType="Self.HitCounter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VisitorsFeedBack" EntityType="Self.VisitorsFeedBack" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SiteDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="HitCounter">
+          <Key>
+            <PropertyRef Name="SLID" />
+          </Key>
+          <Property Name="SLID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IPAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateData" Type="DateTimeOffset" Nullable="false" Precision="7" />
+        </EntityType>
+        <EntityType Name="VisitorsFeedBack">
+          <Key>
+            <PropertyRef Name="VisitorId" />
+          </Key>
+          <Property Name="VisitorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VisitorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VisitorEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VisitorCommentTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="VisitorComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FeedbackTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VisitorImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityContainer Name="HitCountSiteDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="HitCounters" EntityType="Self.HitCounter" />
+          <EntitySet Name="VisitorsFeedBacks" EntityType="Self.VisitorsFeedBack" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SiteDBModelStoreContainer" CdmEntityContainer="HitCountSiteDBEntities">
+          <EntitySetMapping Name="HitCounters">
+            <EntityTypeMapping TypeName="SiteDBModel.HitCounter">
+              <MappingFragment StoreEntitySet="HitCounter">
+                <ScalarProperty Name="SLID" ColumnName="SLID" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="CreateData" ColumnName="CreateData" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VisitorsFeedBacks">
+            <EntityTypeMapping TypeName="SiteDBModel.VisitorsFeedBack">
+              <MappingFragment StoreEntitySet="VisitorsFeedBack">
+                <ScalarProperty Name="VisitorId" ColumnName="VisitorId" />
+                <ScalarProperty Name="VisitorName" ColumnName="VisitorName" />
+                <ScalarProperty Name="VisitorEmail" ColumnName="VisitorEmail" />
+                <ScalarProperty Name="VisitorCommentTitle" ColumnName="VisitorCommentTitle" />
+                <ScalarProperty Name="VisitorComment" ColumnName="VisitorComment" />
+                <ScalarProperty Name="FeedbackTime" ColumnName="FeedbackTime" />
+                <ScalarProperty Name="VisitorImage" ColumnName="VisitorImage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

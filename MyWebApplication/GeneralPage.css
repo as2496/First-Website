@@ -1,0 +1,898 @@
+﻿/* Nature - an open source xhtml/css website layout by Studio-plume.org kty 
+(Jan 04, 2007)
+ */
+
+body {
+margin: 0 auto;
+padding: 0;
+font: 76% Verdana,Tahoma,Arial,sans-serif;
+background: #211d1e url('images/SiteTextureBackground.jpg') repeat-y;
+}
+.fixed {
+position:fixed;
+top:0;
+}
+
+
+#wrap {
+background: #000000;
+color: #ffffff;
+border:  none;
+margin: 0 auto;
+width: 1000px;
+/*width: 790px;*/
+}
+
+#header {
+clear: both;
+margin: 0px 0em 0px 0em;
+padding: 0;
+height: 75px;
+background-color: #000000;}
+
+#header h3 {
+width: 350px;
+margin: 0px 0px 0px 15px;
+float: left;
+line-height: 2.0em;
+font-size: 1.8em;
+}
+
+#header p {
+width: 500px;
+float: right;
+text-align: center;
+color: #a0a0a0;
+margin: 8px 0px 0px 0px;
+font-size: 1.5em;
+line-height: 1.8em;
+height: 41px;
+}
+
+#avmenu {
+/*clear: left;*/
+float: left;
+width: 150px;
+margin: 10px 0 0px 0;
+padding: 0;
+font-size: 0.9em;
+height: 208px;
+top:308px;
+}
+
+#avmenu ul {	
+list-style: none;
+width: 150px;
+margin: 0 0 20px 0;
+padding: 0;
+font-size: 2.0em;
+}	
+
+#avmenu li {
+margin-bottom: 4px;
+}
+
+#avmenu li a {
+font-weight: bold;
+height: 25px;
+text-decoration: none;
+color: #fffff1;
+display: block;
+padding: 6px 0 0 10px;
+background: #4169E1;
+border-left: 1px #846837 solid;
+    top: 2px;
+    left: 17px;
+    width: 137px;
+}
+	
+	
+#avmenu li a:hover {
+background: #00FFFF;
+color: #fffff1;
+border-left: 4px #47381e solid;
+color: #ff9900;
+}
+
+#weather {
+margin-bottom: 0px;
+padding: 10px;
+width: 130px;
+}
+
+#extras {
+float: right;
+width: 150px;
+margin: 0 0 10px 0;
+padding: 0;
+font-size: 1.4em;
+line-height: 2.0em;
+top:308px;
+}
+
+#extras img {
+margin: 0 0 .5em 0;
+}
+
+#extras p {
+margin: 0 0 2.0em 0;
+}
+#HitCount{
+    margin-left:5px;
+    margin-top:10px;
+    height:50px;
+    width:140px;
+}
+#HitCountLabel1 td{
+    width:90px;
+    height: 20px;
+    font-size:15px;
+
+}
+#HitCountLabel2 td{
+
+    width:90px;
+    height: 20px;
+    font-size:15px;
+}
+
+#content {
+margin: 0em 160px 0px 160px;
+padding: 0 0px 0 0px;
+line-height: 1.6em;
+text-align: left;
+}
+
+#content h2 {
+font-size: 2.0em;
+margin: 0px 0 0.5em 0;
+height: 30px;
+    width: 675px;
+}
+
+h3 {
+font-size: 1.5em;
+margin: 4px 0 10px 0;
+    height: 20px;
+}
+
+a {
+text-decoration: none;
+color: #b6952a;
+}
+
+a:hover {
+text-decoration: underline;
+color: #b6952a;
+}
+
+
+#footer {
+clear: both;
+margin: 0 auto;
+padding: 0px 0em 0px 0em;
+width: 1000px;
+text-align: center;
+color: #808080;
+font-size: 1.4em;
+height: 228px;
+background: #211d1e url(images/NYCFooter.jpg) no-repeat right;
+border: none;}
+
+#footer a {
+color: #808080;
+text-decoration: none;
+}
+
+#footer a:hover {
+text-decoration: underline;
+}
+
+.left {
+margin: 0px 7px 0px 5px;
+float: left;
+}
+
+.right {
+margin: 0px 7px 0px 5px;
+float: right;
+}
+
+.textright {
+text-align: right;
+}
+
+.center {
+text-align: center;
+}
+
+.small {
+font-size: 1.0em;
+}
+
+.bold {
+font-weight: bold;
+}
+
+.hide {
+display: none;
+}
+/*Default/Home Page Styles*/
+#welcome p {
+width: 648px;
+float: right;
+text-align: left;
+color: #a0a0a0;
+margin: 0px 0px 0px 0px;
+/*font-family: "Comic Sans MS", cursive, sans-serif;*/
+font-size: 1.8em;
+line-height: 1.8em;
+height: 157px;
+}
+
+#welcome h3 {
+text-decoration: underline;
+text-align: center;
+font-size: 2.0em;
+color: #1a8eff;
+}
+
+#welcome img {
+padding: 0px;
+width: 150px;
+height: 150px;
+align-items:baseline;
+display:inline;
+float:right;
+margin:5px 70px 5px 5px;
+}
+
+#welcome h1{
+    border: 1px solid black;
+    width: 679px;
+    color: #ff0066;
+    text-align:center;
+    -webkit-animation: myWelcomemove 5s infinite;
+    animation: myWelcomemove 5s infinite;
+}
+
+/* Standard syntax */
+@keyframes myWelcomemove {
+    50% {color: yellow;}
+}
+
+
+#Autobio h2 {
+    text-align: center;
+    text-size-adjust: 70%;
+    border: 1px solid black;
+    color: #006600;
+    width: 677px;
+    height: 27px;
+    margin-top:169px;
+    font-size: 3.0em;
+    
+}
+
+#Autobio p {
+    font-size: 1.8em;
+    line-height: 1.8em;
+    height: Auto;
+}
+
+#Autobio img {
+    float:left;
+    margin:0px 10px 0 0;
+    width:220px;
+    height:220px
+}
+
+/*Contat Page Style*/
+#contact {
+    margin-top: 0px;
+    font-size: 1.8em;
+    line-height:2.0em;
+    height:370px;
+}
+#contact img {
+padding: 0px;
+display:inline;
+    height: 32px;
+    width: 32px;
+    margin-right: 0px;
+}
+
+#contact h2 {
+    border: 1px solid black;
+    width: 551px;
+    /*height: 4px;*/
+    -webkit-animation: ContactHeaderMove 5s infinite; /* Chrome, Safari, Opera */
+    animation: ContactHeaderMove 5s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes ContactHeaderMove {
+    50% {font-size: 35px;}
+}
+
+/*Gallery Page Style*/
+
+#galleryHead {
+    border: 1px solid black;
+    width: 551px;
+    text-align:center;
+    margin-top:5px;
+    -webkit-animation: GalleryHeaderMove 6s infinite; /* Chrome, Safari, Opera */
+    animation: GalleryHeaderMove 6s infinite;
+    height: 40px;
+    margin-left: 48px;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes GalleryHeaderMove {
+    60% {font-size: 25px;}
+}
+/*Modal Style for Gallery*/
+
+/* The Image Box */
+div.img {
+    border: 2px solid #ccc;
+    width:100px;
+     height:150px;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+/* The Image */
+div.img img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Description of Image */
+div.desc {
+    padding: 15px;
+    text-align: center;
+    font-size:10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Add Responsiveness */
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 98px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    font-size:12px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0.1)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Columns */
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+    .modal-content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+/* Clear Floats */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*Modal Style for Gallery*/
+/* Popover */
+  .popover {
+      border: 2px solid black;
+      width: auto;
+  }
+  /* Popover Header */
+  .popover-title {
+      background-color: #73AD21; 
+      color: #FFFFFF; 
+      font-size: 15px;
+      text-align:center;
+      height: auto;
+  }
+  /* Popover Body */
+  .popover-content {
+      background-color: coral;
+      color: #FFFFFF;
+      padding: 25px;
+  }
+  /* Popover Arrow */
+  .arrow {
+      border-right-color: red !important;
+  }
+
+#GalleryContent {
+    height:400px;
+    width: 500px;
+    margin:20px auto;
+    position:relative;
+}
+#img {
+    height:400px;
+    width: 500px;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    margin-left: 0px;
+}
+#Left-holder{
+    height:400px;
+    width: 100px;
+    position:absolute;
+    left:0px;
+    top:0px;
+}
+#Right-holder{
+    height:400px;
+    width: 100px;
+    position:absolute;
+    right:0px;
+    top:0px;
+}
+
+#infoBut-holder{
+    height:32px;
+    width: 32px;
+    position:absolute;
+    right:0px;
+    bottom:0px;
+}
+
+.info{
+    height:32px;
+    width: 32px;
+    position:absolute;
+    right:0px;
+    bottom:5%;
+    opacity: 0.7;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+
+#infoBut-holder img:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+.Previous{
+    height:50px;
+    width: 48px;
+    position:absolute;
+    left:0px;
+    top:40%;
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+#Left-holder img:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+.Next{
+    height:50px;
+    width: 48px;
+    position:absolute;
+    right:0px;
+    top:39%;
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+#Right-holder img:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+/*Feedback Page Style*/
+#feedbackPage {
+    margin-top: 0px;
+    font-size: 1.8em;
+    line-height:2.0em
+}
+#feedbackPage h2{
+    text-align:center;
+    border: 1px solid black;
+    width: 551px;
+    height: 40px;
+    -webkit-animation: FeedbackHeaderMove 5s infinite; /* Chrome, Safari, Opera */
+    animation: FeedbackHeaderMove 5s infinite;
+}
+
+#GridViewComment{
+    z-index:1;
+}
+
+#feedback{
+    z-index:2;
+    position:absolute;
+    opacity:0.01;
+    height:90%;
+    width:50%;
+    top:10%;
+    left:60%;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes FeedbackHeaderMove {
+    50% {font-size: 30px;}
+}
+.mydatagrid
+{
+    width: 100%;
+    border: solid 2px black;
+    min-width: 80%;
+}
+.header
+{
+    background-color: #4d4dff;
+    font-family: Arial;
+    color: White;
+    height: 25px;
+    text-align: center;
+    font-size: 16px;
+}
+.rows
+{
+    background-color: #000;
+    font-family: Arial;
+    font-size: 14px;
+    color: #fff;
+    min-height: 25px;
+    text-align: left;
+    width:auto;
+}
+.rows:hover
+{
+    background-color: #ff4f53;
+    color: #fff;
+}
+.mydatagrid a /** FOR THE PAGING ICONS  **/
+{
+    background-color: Transparent;
+    padding: 5px 5px 5px 5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.mydatagrid a:hover /** FOR THE PAGING ICONS  HOVER STYLES**/
+{
+    background-color: #fff;
+    color: #000;
+}
+.mydatagrid span /** FOR THE PAGING ICONS CURRENT PAGE INDICATOR **/
+{
+    padding: 5px 5px 5px 5px;
+    background-color: #000;
+    color: #fff;
+}
+.pager
+{
+    background-color: #ff4f53;
+    font-family: Arial;
+    color: White;
+    height: 30px;
+    text-align: left;
+}
+.FooterStyle
+ {
+  background-color:#4d4dff; 
+  height:25px;
+}
+.mydatagrid td
+{
+    padding: 5px;
+}
+.mydatagrid th {
+    padding: 5px;
+}
+
+#CommentArea h2 {
+float:left;
+font-family: Arial;
+color: #f50c0c;
+margin-top: 20px;
+margin-left: 50px;
+margin-right: 20px;
+text-align:left;
+width:110px;
+}
+
+#CommentAreaTextBox {
+width:350px;
+margin-bottom: 20px;
+}
+
+#btnPost {
+ margin-left: 170px;
+ margin-top:0px;
+ margin-bottom:10px;
+ width: 126px;
+}
+
+.ErrorMessage {
+    height:0px;
+    width:0px;
+    font-size: 12px;
+    font-weight:500;
+    color: #f50b0b;   
+}
+
+/*Professional Page Style */
+#Professional {
+    font-size:12px;
+    line-height:15px;
+}
+#Professional h5 {
+    border: 1px solid black;
+    width: 551px;
+    text-align:center;
+    -webkit-animation: ProfHeaderMove 6s infinite; /* Chrome, Safari, Opera */
+    animation: ProfHeaderMove 6s infinite;
+    height: 40px;
+    margin-left: 48px;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes ProfHeaderMove {
+    60% {font-size: 25px;}
+}
+.table {
+    text-align:center;
+    margin:50px 80px 30px 100px; /* t/r/b/l*/
+    width:70%;
+}
+
+.thLeft{
+width:200px;
+text-align:center;
+}
+
+.thRight{
+width:250px;
+text-align:center;
+}
+
+.table td{
+font-style:oblique;
+}
+
+.subHeading{
+    font-weight:600;
+    color:#1e27bd;
+}
+
+#workEx {
+    float:left;
+    margin-left: 0px;
+}
+#workEx h2 {
+    text-align:left;
+    text-decoration:underline;
+    text-decoration-color: #cc6600;
+    
+}
+.row {
+    margin-left:125px;
+    width:560px;
+}
+.WorkExSub h4{
+    color: #d5b14e;
+    font-size:14px;
+    line-height:18px;
+}
+
+#Project {
+    float:left;
+    margin-left: 0px;
+    width: 308px;
+}
+#Project h2 {
+    text-align:left;
+    text-decoration:underline;
+    text-decoration-color: #cc6600;
+    width:300px;
+    
+}
+.ProjectSub h4{
+    color: #d5b14e;
+    font-size:14px;
+    line-height:18px;
+}
+
+#Certification {
+    float:left;
+    margin-left: 0px;
+    width: 150px;
+}
+#Certification h2 {
+    text-align:left;
+    text-decoration:underline;
+    text-decoration-color: #cc6600;
+    width:150px;
+    
+}
+.CertiSub h4{
+    color: #d5b14e;
+    font-size:14px;
+    line-height:18px;
+}
+
+#Education {
+    float:left;
+    margin-left: 0px;
+    width: 150px;
+}
+#Education h2 {
+    text-align:left;
+    text-decoration:underline;
+    text-decoration-color: #cc6600;
+    width:150px;
+    
+}
+.EduSub h4{
+    color: #d5b14e;
+    font-size:14px;
+    line-height:18px;
+}
+
+/*Abot Page Style*/
+#aboutPage {
+    font-size:14px;
+    line-height:15px;
+}
+#aboutPage h5 {
+    border: 1px solid black;
+    width: 551px;
+    text-align:center;
+    -webkit-animation: AboutHeaderMove 6s infinite; /* Chrome, Safari, Opera */
+    animation: AboutHeaderMove 6s infinite;
+    height: 40px;
+    margin-left: 48px;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes AboutHeaderMove {
+    60% {font-size: 25px;}
+}
+#travel {
+    height: 296px;
+    width:678px;
+    /*margin-top: 20px;*/
+    background: #000000 url(images/AboutPagePics/travel.jpg) no-repeat;
+}
+#travel p{
+    font-size:14px;
+    text-align:left;
+    font-weight:500;
+   float:left;
+   width:677px;
+   line-height:18px;
+   margin-top:150px;
+   margin-bottom:0;
+   height: 142px;
+}
+#music{
+background: #000000 url(images/AboutPagePics/music.jpg) repeat-x;
+height:410px;
+    /*margin-bottom:50px;*/
+}
+#music p{
+    font-size:14px;
+    text-align:left;
+    font-weight:500;
+    line-height:18px;
+    margin-top:105px;
+    height: 309px;
+}
+#cook{
+height: 300px;
+width:680px;
+    margin-top: 10px;
+    background: #000000 url(images/AboutPagePics/Cooking.PNG) repeat-x;
+}
+#cook p{
+    font-size:14px;
+    text-align:left;
+    font-weight:500;
+   float:left;
+   width:650px;
+   line-height:18px;
+   margin-top:90px;
+
+}
+#cook h2{
+    font-size:25px;
+    color:gold;
+    /*margin-bottom:35px;*/
+}
+
+
